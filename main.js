@@ -30,7 +30,7 @@ function validateCred(arr) {
     newArr.push(arr[i])
   } 
   for (i=0; i<arr.length; i++) {
-    if (i%2 === 0) {
+    if (newArr[i%2] === 0) {
       newArr[i] = newArr[i]*2
     }
   }
