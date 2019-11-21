@@ -27,23 +27,23 @@ let newArr = []
 // Add your functions below:
 function validateCred(arr) {
   arr.pop();
-  console.log(arr)
+  
   for (i=arr.length-1; i>-1; i--) {
     newArr.push(arr[i])
   } 
-  console.log(newArr)
+ 
   for (i=0; i<arr.length; i++) {
     if (i%2 === 0) {
       newArr[i] = newArr[i] * 2
     }
   }
-  console.log(newArr)
+  
   for (i=0; i<arr.length;i++) {
     if (newArr[i]>9) {
       newArr[i] = newArr[i] - 9
     }
   }
-  console.log(newArr)
+  
   newArrSum = newArr.reduce((a,b) => a+b)
   checkDigit = 10 - (newArrSum % 10)
 }
